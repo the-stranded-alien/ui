@@ -6,7 +6,7 @@ const TransformerPage = () => {
     const [sensors, setSensors] = useState([]);
 
     useEffect(() => {
-        fetch('http://ec2-3-6-87-196.ap-south-1.compute.amazonaws.com:5000/sensors/asset-type/Transformer')
+        fetch('https://ec2-3-6-87-196.ap-south-1.compute.amazonaws.com:5000/sensors/asset-type/Transformer')
             .then(response => response.json())
             .then(data => {
                 setSensors(data);
@@ -15,7 +15,7 @@ const TransformerPage = () => {
     }, []);
 
     const getAssetData = (asset_id) => {
-        return fetch(`http://ec2-3-6-87-196.ap-south-1.compute.amazonaws.com:5000/realtime/asset/${asset_id}`)
+        return fetch(`https://ec2-3-6-87-196.ap-south-1.compute.amazonaws.com:5000/realtime/asset/${asset_id}`)
             .then(response => response.json())
             .catch(err => console.log(err.message));
     };

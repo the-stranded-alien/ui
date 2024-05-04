@@ -8,7 +8,7 @@ const HomePage = () => {
     const [assets, setAssets] = useState([]);
 
     useEffect(() => {
-        fetch('http://ec2-3-6-87-196.ap-south-1.compute.amazonaws.com:5000/assets')
+        fetch('https://ec2-3-6-87-196.ap-south-1.compute.amazonaws.com:5000/assets')
             .then(response => response.json())
             .then(data => {
                 setAssets(data);
